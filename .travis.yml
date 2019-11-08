@@ -1,0 +1,13 @@
+language: golang
+
+go:
+  - 1.13.x
+
+env:
+  - GO111MODULE=on A
+
+before_install:
+  - go get -v golang.org/x/lint/golint
+
+script:
+  - go test -v ./...
